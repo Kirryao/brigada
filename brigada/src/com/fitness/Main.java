@@ -2,6 +2,6 @@ package com.fitness;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println(1f9);
+		System.out.println(123);
 	}
 }
