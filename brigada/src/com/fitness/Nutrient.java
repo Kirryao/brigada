@@ -8,9 +8,10 @@ public abstract class Nutrient extends Main {
 	//Пол(Male,Female)
 	//Активность по МР 2.3.1-0253/21
 	//Множитель конкретного нутриента по МР 2.3.1-0253/21
-	private double multiplier;
+	private double multiplier=1;
+	private double dividend=1;
 	//Формула подсчета Миффлин-Сан Жеора
-	private double Calculate(double h,double m,int age,String sex,int activity,String goal) {
+	public double Calculate(double h,double m,int age,String sex,int activity,String goal) {
 		double f=9.99*m + 6.25*h- 4.92*age;
 		if(sex=="Male") {
 			f+=5;
