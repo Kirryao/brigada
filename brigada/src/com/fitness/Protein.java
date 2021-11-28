@@ -1,8 +1,11 @@
 package com.fitness;
 
 public class Protein extends Nutrient{
-		private double multiplier=0.12;
-		private double dividend=4;
-		
+
+		static double multiplier=0.12;
+		static double dividend=4;
+		Protein() {
+		super(multiplier, dividend);
+	}
 
 }

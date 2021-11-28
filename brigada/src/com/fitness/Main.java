@@ -86,7 +86,15 @@ main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 }
 public static void main(String[] args) {
-app=new Main();
+//app=new Main();
+Fat fat=new Fat();
+System.out.println(fat.Calculate(180,60,30,"Male",2,"Набор массы"));
+Carb carb=new Carb();
+System.out.println(carb.Calculate(180,60,30,"Male",2,"Набор массы"));
+Protein protein=new Protein();
+System.out.println(protein.Calculate(180,60,30,"Male",2,"Набор массы"));
+Calori calori=new Calori();
+System.out.println(calori.Calculate(180,60,30,"Male",2,"Набор массы"));
 }
 }
 	

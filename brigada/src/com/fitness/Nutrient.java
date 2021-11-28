@@ -1,6 +1,8 @@
 package com.fitness;
 //для расчёта общей калорийности и конкретных нутриентов
 public abstract class Nutrient extends Main {
+	private double multiplier;
+	private double dividend;
 	//Цель:Похудение,сохранение и набор массы
 	//Высота в сантиметрах
 	//Вес в килограммах
@@ -8,8 +10,10 @@ public abstract class Nutrient extends Main {
 	//Пол(Male,Female)
 	//Активность по МР 2.3.1-0253/21
 	//Множитель конкретного нутриента по МР 2.3.1-0253/21
-	private double multiplier=1;
-	private double dividend=1;
+	Nutrient(double multiplier, double dividend){
+	this.multiplier=multiplier;
+	this.dividend=dividend;
+	}
 	//Формула подсчета Миффлин-Сан Жеора
 	public double Calculate(double h,double m,int age,String sex,int activity,String goal) {
 		double f=9.99*m + 6.25*h- 4.92*age;

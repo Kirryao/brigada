@@ -1,6 +1,9 @@
 package com.fitness;
 
 public class Fat extends Nutrient{
-	private double multiplier=0.30;
-	private double dividend=9;
+	static double multiplier=0.3;
+	static double dividend=9;
+	Fat() {
+		super(multiplier, dividend);
+	}
 }
