@@ -95,6 +95,9 @@ Protein protein=new Protein();
 System.out.println(protein.Calculate(180,60,30,"Male",2,"Набор массы"));
 Calori calori=new Calori();
 System.out.println(calori.Calculate(180,60,30,"Male",2,"Набор массы"));
+IntegralDeathProb integraldeathprob =new IntegralDeathProb();
+System.out.println(String.format("%.0f%%",integraldeathprob.Calculate(30)*100));
+System.out.println(String.format("%.0f%%",20.0));
 }
 }
 	

@@ -7,7 +7,7 @@ public abstract class Makeham_abs {
 		this.B=B;
 		this.C=C;
 	}
-	private double prob(int age) {
+	public double Calculate(int age) {
 		return 1-Math.exp(-A*age-B*(Math.pow(C, age)-1)/Math.log(C));
 	}
 }
