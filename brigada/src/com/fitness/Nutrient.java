@@ -1,6 +1,6 @@
 package com.fitness;
 //для расчёта общей калорийности и конкретных нутриентов
-public abstract class Nutrient extends Main {
+public abstract class Nutrient{
 	private double multiplier;
 	private double dividend;
 	//Цель:Похудение,сохранение и набор массы
