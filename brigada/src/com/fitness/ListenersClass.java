@@ -7,9 +7,9 @@ import javax.swing.JTextArea;
 
 import static com.fitness.Main.*;
 
-public class LisstenersClass {
+public class ListenersClass {
 	Main w;
-	LisstenersClass(Main w){
+	ListenersClass(Main w){
 		this.w=w;
 	}
 	    public  ListenerCalculate listenerCalculate=new ListenerCalculate();
@@ -41,7 +41,6 @@ public class LisstenersClass {
 	            }
 	        	
 	        	if (flag) {
-	        		System.out.println("888");
 	        	Protein protein=new Protein();
 	        	Fat fat=new Fat();
 	        	Carb carb=new Carb();
@@ -57,7 +56,7 @@ public class LisstenersClass {
 	        	//Double String.format("%.0f%%",integraldeathprob.Calculate(30)*100);
 	            //w.output.setText(Float.toString(c.Cal(w.set)));
 	        	String template = "Белки: %f грамм\nЖиры: %f грамм\nУглеводы %f грамм\nКалории: %f ккал\nВероятность смерти: %.2f%%";
-	        	w.output.setText(String.format(template, protein_g, fat_g, carb_g, caloriNew, integraldeathprobNew));
+	        	w.output.setText(String.format(template, protein_g, fat_g, carb_g, caloriNew, integraldeathprobNew*100));
 	        	}
 	        	
 	        }

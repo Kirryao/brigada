@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class Main {
 public static Main app;
-private LisstenersClass lisstenersClass=new LisstenersClass(this);
+private ListenersClass listenersClass=new ListenersClass(this);
 private JFrame main_GUI=new JFrame();
 private JPanel main_panel= new JPanel();
 protected JComboBox menu1;
@@ -26,7 +26,7 @@ protected JTextField input3 = new JTextField("", 20);
 
 public Main() {
 output.setEditable(false);
-main_GUI.setTitle ("Фитнес-алькулятор");
+main_GUI.setTitle ("Фитнес-калькулятор");
 main_GUI.setBounds(0,0,461,666);
 main_GUI.setResizable(false);
 
@@ -34,7 +34,7 @@ main_panel.setLayout(null);
 main_GUI.add(main_panel); 
 
 button_calculate.setBounds(80,310,300,50);
-button_calculate.addActionListener(lisstenersClass.listenerCalculate);
+button_calculate.addActionListener(listenersClass.listenerCalculate);
 main_panel.add(button_calculate);
 
 JLabel info2 = new JLabel("Выберите нужную операцию");
