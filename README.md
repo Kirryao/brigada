@@ -1,7 +1,7 @@
 Travis 
 [![Build Status](https://app.travis-ci.com/Kirryao/brigada.svg?branch=main)](https://app.travis-ci.com/Kirryao/brigada)
 -------------
-#Разработчики
+Разработчики
 
 <img src="https://avatars.githubusercontent.com/u/91302230?v=4" width="50"> [Валерия Холодилина](https://github.com/KholodGit)
 
