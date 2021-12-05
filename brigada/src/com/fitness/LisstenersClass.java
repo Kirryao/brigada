@@ -2,6 +2,9 @@ package com.fitness;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.JTextArea;
+
 import static com.fitness.Main.*;
 
 public class LisstenersClass {
@@ -13,18 +16,46 @@ public class LisstenersClass {
 	    public class ListenerCalculate implements ActionListener {
 	        @Override
 	        public void actionPerformed(ActionEvent event) {
-	            
-	        	Fat fat=new Fat();
-	        	System.out.println(fat.Calculate(180,60,30,"Male",2,"Набор массы"));
-	        	Carb carb=new Carb();
-	        	System.out.println(carb.Calculate(180,60,30,"Male",2,"Набор массы"));
+	        	float rost = 0;
+	        	w.output.setText("");
+	        	try {
+	                rost = Float.parseFloat(w.input1.getText());
+	            } catch (NumberFormatException nfe) {
+	            	w.output.setText("Неверно задан рост");
+	            }
+	        	float massa = 0;
+	        	try {
+	                massa = Float.parseFloat(w.input2.getText());
+	            } catch (NumberFormatException nfe) {
+	            	w.output.setText(w.output.getText()+"\n"+"Неверно задана масса");
+	            }
+	        	int vozrast = 0;
+	        	try {
+	                vozrast = Integer.parseInt(w.input3.getText());
+	            } catch (NumberFormatException nfe) {
+	            	w.output.setText(w.output.getText()+"\n"+"Неверно задан возраст");
+	            }
+	        	JTextArea outputNew = new JTextArea();
+	        	if (w.output.getText() == outputNew.getText()) {
+	        		System.out.println("888");
 	        	Protein protein=new Protein();
-	        	System.out.println(protein.Calculate(180,60,30,"Male",2,"Набор массы"));
+	        	Fat fat=new Fat();
+	        	Carb carb=new Carb();
 	        	Calori calori=new Calori();
-	        	System.out.println(calori.Calculate(180,60,30,"Male",2,"Набор массы"));
 	        	IntegralDeathProb integraldeathprob =new IntegralDeathProb();
-	        	System.out.println(String.format("%.0f%%",integraldeathprob.Calculate(30)*100));
+	        	
+	        	Double protein_g = protein.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
+	        	Double fat_g = fat.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
+	        	Double carb_g = carb.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
+	        	Double caloriNew = calori.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
+	        	Double integraldeathprobNew = integraldeathprob.Calculate(vozrast);
+
+	        	//Double String.format("%.0f%%",integraldeathprob.Calculate(30)*100);
 	            //w.output.setText(Float.toString(c.Cal(w.set)));
+	        	String template = "Белки: %f грамм\nЖиры: %f грамм\nУглеводы %f грамм\nКалории: %f ккал\nВероятность смерти: %f %.2f%%";
+	        	w.output.setText(String.format(template, protein_g, fat_g, carb_g, caloriNew, integraldeathprobNew));
+	        	}
+	        	
 	        }
 	    }
 }

@@ -18,7 +18,7 @@ private JLabel info3 = new JLabel("Введите свою массу в кг");
 private JLabel info4 = new JLabel("Введите свой пол");
 private JLabel info5 = new JLabel("Введите свою категорию");
 private JLabel info6 = new JLabel("Введите cвой возраст");
-protected JTextField output= new JTextField("", 20);
+protected JTextArea output= new JTextArea();
 protected JTextField input1 = new JTextField("", 20);
 protected JTextField input2 = new JTextField("", 20);
 protected JTextField input3 = new JTextField("", 20);
@@ -34,6 +34,7 @@ main_panel.setLayout(null);
 main_GUI.add(main_panel); 
 
 button_calculate.setBounds(80,310,300,50);
+button_calculate.addActionListener(lisstenersClass.listenerCalculate);
 main_panel.add(button_calculate);
 
 JLabel info2 = new JLabel("Выберите нужную операцию");
@@ -72,13 +73,13 @@ main_panel.add(info4);
 info5.setBounds(20,240,200,30);
 main_panel.add(info5);
 
-input1.setBounds(200,80,100,30);
+input1.setBounds(200,80,241,30);
 main_panel.add(input1);
 
-input2.setBounds(200,120,100,30);
+input2.setBounds(200,120,241,30);
 main_panel.add(input2);
 
-input3.setBounds(200,160,100,30);
+input3.setBounds(200,160,241,30);
 main_panel.add(input3);
 
 output.setBounds(80,370,300,200);
@@ -90,16 +91,6 @@ main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 }
 public static void main(String[] args) {
 app=new Main();
-Fat fat=new Fat();
-System.out.println(fat.Calculate(180,60,30,"Male",2,"Набор массы"));
-Carb carb=new Carb();
-System.out.println(carb.Calculate(180,60,30,"Male",2,"Набор массы"));
-Protein protein=new Protein();
-System.out.println(protein.Calculate(180,60,30,"Male",2,"Набор массы"));
-Calori calori=new Calori();
-System.out.println(calori.Calculate(180,60,30,"Male",2,"Набор массы"));
-IntegralDeathProb integraldeathprob =new IntegralDeathProb();
-System.out.println(String.format("%.0f%%",integraldeathprob.Calculate(30)*100));
 }
 }
 	
