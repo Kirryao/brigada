@@ -18,6 +18,7 @@ private JLabel info3 = new JLabel("Введите свою массу в кг");
 private JLabel info4 = new JLabel("Введите свой пол");
 private JLabel info5 = new JLabel("Введите свою категорию");
 private JLabel info6 = new JLabel("Введите cвой возраст");
+//информация о разработчиках
 private JLabel info7 = new JLabel("Выполнил:");
 private JLabel info8 = new JLabel("ст. гр. ИВТ-323");
 private JLabel info9 = new JLabel("Кислицын К.К.");
@@ -71,7 +72,7 @@ main_panel.add(info3);
 
 info6.setBounds(20,160,200,30);
 main_panel.add(info6);
-//информация о разработчиках
+//информация о разрабах
 info7.setBounds(350,450,200,20);
 main_panel.add(info7);
 info8.setBounds(320,470,200,20);
