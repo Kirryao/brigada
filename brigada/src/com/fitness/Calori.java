@@ -7,3 +7,4 @@ public class Calori extends Nutrient{
 		super(multiplier,dividend);
 		}
 }
+
