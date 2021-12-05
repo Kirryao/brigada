@@ -27,7 +27,7 @@ protected JTextField input3 = new JTextField("", 20);
 public Main() {
 output.setEditable(false);
 main_GUI.setTitle ("Фитнес-алькулятор");
-main_GUI.setBounds(0,0,460,666);
+main_GUI.setBounds(0,0,461,666);
 main_GUI.setResizable(false);
 
 main_panel.setLayout(null);
