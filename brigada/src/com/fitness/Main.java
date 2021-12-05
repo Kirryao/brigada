@@ -18,7 +18,6 @@ private JLabel info3 = new JLabel("Введите свою массу в кг");
 private JLabel info4 = new JLabel("Введите свой пол");
 private JLabel info5 = new JLabel("Введите свою категорию");
 private JLabel info6 = new JLabel("Введите cвой возраст");
-//информация о разработчиках
 private JLabel info7 = new JLabel("Выполнил:");
 private JLabel info8 = new JLabel("ст. гр. ИВТ-323");
 private JLabel info9 = new JLabel("Кислицын К.К.");
