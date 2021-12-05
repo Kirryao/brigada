@@ -19,4 +19,18 @@ public abstract class Makeham_abs {
          
 		return operation.Calculate(age);
 	}
+
+
+public double Calculate(double age) {
+	Operationable2 operation;
+    operation = (x)->(1-Math.exp(-A*x-B*(Math.pow(C, x)-1)/Math.log(C)));
+    
+    
+     
+	return operation.Calculate(age);
+}
+interface Operationable2{
+    double Calculate(double age);
+}
+
 }
