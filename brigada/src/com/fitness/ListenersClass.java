@@ -53,12 +53,9 @@ public class ListenersClass {
 	        	Double caloriNew = calori.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
 	        	Double integraldeathprobNew = integraldeathprob.Calculate(vozrast);
 
-	        	//Double String.format("%.0f%%",integraldeathprob.Calculate(30)*100);
-	            //w.output.setText(Float.toString(c.Cal(w.set)));
 	        	String template = "Белки: %f грамм\nЖиры: %f грамм\nУглеводы %f грамм\nКалории: %f ккал\nВероятность смерти: %.2f%%";
 	        	w.output.setText(String.format(template, protein_g, fat_g, carb_g, caloriNew, integraldeathprobNew*100));
 	        	}
-	        	
 	        }
 	    }
 }
