@@ -17,7 +17,7 @@ public abstract class Nutrient{
 	//Формула подсчета Миффлин-Сан Жеора
 	public double Calculate(double h,double m,int age,String sex,int activity,String goal) {
 		double f=9.99*m + 6.25*h- 4.92*age;
-		if(sex=="Male") {
+		if(sex=="Мужской") {
 			f+=5;
 		}
 		else {

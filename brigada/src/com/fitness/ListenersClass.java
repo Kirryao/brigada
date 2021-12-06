@@ -46,15 +46,20 @@ public class ListenersClass {
 	        	Carb carb=new Carb();
 	        	Calori calori=new Calori();
 	        	IntegralDeathProb integraldeathprob =new IntegralDeathProb();
+	        	String sex = w.menu2.getSelectedItem().toString();
+	        	Integer type = Integer.parseInt(w.menu3.getSelectedItem().toString());
+	        	String goal = w.menu1.getSelectedItem().toString();
+
+
 	        	
-	        	Double protein_g = protein.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
-	        	Double fat_g = fat.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
-	        	Double carb_g = carb.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
-	        	Double caloriNew = calori.Calculate(rost,massa,vozrast,"Male",2,"Набор массы");
+	        	Double protein_g = protein.Calculate(rost,massa,vozrast,sex,type,goal);
+	        	Double fat_g= fat.Calculate(rost,massa,vozrast,sex,type,goal);
+	        	Double carb_g = carb.Calculate(rost,massa,vozrast,sex,type,goal);
+	        	Double caloriNew = calori.Calculate(rost,massa,vozrast,sex,type,goal);
 	        	Double integraldeathprobNew = integraldeathprob.Calculate(vozrast);
 
-	        	String template = "Белки: %f грамм\nЖиры: %f грамм\nУглеводы %f грамм\nКалории: %f ккал\nВероятность смерти: %.2f%%";
-	        	w.output.setText(String.format(template, protein_g, fat_g, carb_g, caloriNew, integraldeathprobNew*100));
+	        	String template = "Белки: %.0f грамм\nЖиры: %.0f грамм\nУглеводы %.0f грамм\nКалории: %.0f ккал\nВероятность смерти: %.0f%%";
+	        	w.output.setText(String.format(template,  protein_g, fat_g, carb_g, caloriNew, integraldeathprobNew*100));
 	        	}
 	        }
 	    }
