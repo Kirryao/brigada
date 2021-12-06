@@ -32,7 +32,7 @@ protected JTextField input3 = new JTextField("", 20);
 public Main() {
 output.setEditable(false);
 main_GUI.setTitle ("Фитнес-калькулятор");
-main_GUI.setBounds(0,0,461,620);
+main_GUI.setBounds(0,0,555,666);
 main_GUI.setResizable(false);
 
 main_panel.setLayout(null);
@@ -100,7 +100,9 @@ main_panel.add(input3);
 
 output.setBounds(80,330,300,80);
 main_panel.add(output);
-
+JLabel image=new JLabel(new ImageIcon("brigada/src/com/fitness/Логотип УГАТУ.jpg"));
+image.setBounds(150,450,150,100);
+main_panel.add(image);
 main_GUI.setVisible(true);
 main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
